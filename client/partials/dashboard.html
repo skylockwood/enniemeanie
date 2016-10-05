@@ -1,0 +1,24 @@
+
+<body>
+<a href="/logout">Logout</a>
+<div ng-controller = 'sessionController'>
+<h2>Hi {{currentUser.name}}!</h2>
+
+<div ng-controller = 'questionsController'>
+<a href="#/new_question">Add a Question</a>
+<br>
+<table border = '1'>
+	<tr>
+		<th>Question</th>
+		<th>Answer</th>
+		<th>Action</th>
+	</tr>
+	<tr ng-repeat = 'x in questions'>
+		<td>{{x.content}}</td>
+		<td>{{x._answer.length}}</td>
+		<td> <a href="#/questions/{{x._id}}"> <button>Show</button> </a> <a href="#/question/{{x._id}}/new_answer"><button>Answer</button></a></td>
+	</tr>
+</table>
+
+</body>
+</html>

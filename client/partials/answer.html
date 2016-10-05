@@ -1,0 +1,23 @@
+<body>
+<div ng-controller = 'showQController'>
+<a href="#/dashboard">Home</a>
+<a href="#/questions/{{question.question[0]._id}}">Back to Question</a>
+<a href="/logout">Logout</a>
+<h1>{{question.question[0].content}}</h1>
+<h2>{{question.question[0].description}}</h2>
+
+<div ng-controller = 'answersController'>
+<form>
+	<label>Your Answer: </label><input type="textarea" ng-model="newAnswer.content"><br>
+	<label>Support for you answer (optional): </label><input type="textarea" ng-model="newAnswer.description"><br>
+	<a href="#/dashboard"><button>Cancel</button></a>
+	<input type="submit" value="Submit" ng-click='addAnswer(question.question[0].content)'>
+</form>
+
+
+</div>
+
+
+</div>
+</body>
+</html>

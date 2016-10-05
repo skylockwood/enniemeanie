@@ -1,0 +1,16 @@
+<body>
+<a href="#/dashboard">Home</a>
+<a href="/logout">Logout</a>
+<div ng-controller = 'sessionController'>
+<div ng-controller = 'questionsController'>
+<h1>New Question</h1>
+<form>
+	<label>Question: </label><input type="textarea" ng-model="newQuestion.content"><br>
+	<label>Description (optional): </label><input type="textarea" ng-model="newQuestion.description"><br>
+	<a href="#/dashboard"><button>Cancel</button></a>
+	<input type="submit" value="Submit" ng-click='addQuestion(currentUser.name)'>
+</form>
+</div>
+</div>
+</body>
+</html>
